@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nyanc-queue.github.io</id>
+    <title>NyanC-Queue&apos;s blog</title>
+    <updated>2020-02-28T05:41:35.635Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://nyanc-queue.github.io"/>
+    <link rel="self" href="https://nyanc-queue.github.io/atom.xml"/>
+    <subtitle>这里是NyanC-Queue的博客QWQ</subtitle>
+    <logo>https://nyanc-queue.github.io/images/avatar.png</logo>
+    <icon>https://nyanc-queue.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, NyanC-Queue&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[关于C++，你所需要的所有头]]></title>
+        <id>https://nyanc-queue.github.io/post/c++headers/</id>
+        <link href="https://nyanc-queue.github.io/post/c++headers/">
+        </link>
+        <updated>2020-02-28T05:09:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="优化pragma">优化（pragma）：</h2>
+<pre><code class="language-cpp">#pragma GCC optimize(2)
+#pragma GCC optimize(3)
+#pragma GCC optimize(&quot;Ofast&quot;)
+#pragma GCC optimize(&quot;inline&quot;)
+#pragma GCC optimize(&quot;-fgcse&quot;)
+#pragma GCC optimize(&quot;-fgcse-lm&quot;)
+#pragma GCC optimize(&quot;-fipa-sra&quot;)
+#pragma GCC optimize(&quot;-ftree-pre&quot;)
+#pragma GCC optimize(&quot;-ftree-vrp&quot;)
+#pragma GCC optimize(&quot;-fpeephole2&quot;)
+#pragma GCC optimize(&quot;-ffast-math&quot;)
+#pragma GCC optimize(&quot;-fsched-spec&quot;)
+#pragma GCC optimize(&quot;unroll-loops&quot;)
+#pragma GCC optimize(&quot;-falign-jumps&quot;)
+#pragma GCC optimize(&quot;-falign-loops&quot;)
+#pragma GCC optimize(&quot;-falign-labels&quot;)
+#pragma GCC optimize(&quot;-fdevirtualize&quot;)
+#pragma GCC optimize(&quot;-fcaller-saves&quot;)
+#pragma GCC optimize(&quot;-fcrossjumping&quot;)
+#pragma GCC optimize(&quot;-fthread-jumps&quot;)
+#pragma GCC optimize(&quot;-funroll-loops&quot;)
+#pragma GCC optimize(&quot;-fwhole-program&quot;)
+#pragma GCC optimize(&quot;-freorder-blocks&quot;)
+#pragma GCC optimize(&quot;-fschedule-insns&quot;)
+#pragma GCC optimize(&quot;inline-functions&quot;)
+#pragma GCC optimize(&quot;-ftree-tail-merge&quot;)
+#pragma GCC optimize(&quot;-fschedule-insns2&quot;)
+#pragma GCC optimize(&quot;-fstrict-aliasing&quot;)
+#pragma GCC optimize(&quot;-fstrict-overflow&quot;)
+#pragma GCC optimize(&quot;-falign-functions&quot;)
+#pragma GCC optimize(&quot;-fcse-skip-blocks&quot;)
+#pragma GCC optimize(&quot;-fcse-follow-jumps&quot;)
+#pragma GCC optimize(&quot;-fsched-interblock&quot;)
+#pragma GCC optimize(&quot;-fpartial-inlining&quot;)
+#pragma GCC optimize(&quot;no-stack-protector&quot;)
+#pragma GCC optimize(&quot;-freorder-functions&quot;)
+#pragma GCC optimize(&quot;-findirect-inlining&quot;)
+#pragma GCC optimize(&quot;-frerun-cse-after-loop&quot;)
+#pragma GCC optimize(&quot;inline-small-functions&quot;)
+#pragma GCC optimize(&quot;-finline-small-functions&quot;)
+#pragma GCC optimize(&quot;-ftree-switch-conversion&quot;)
+#pragma GCC optimize(&quot;-foptimize-sibling-calls&quot;)
+#pragma GCC optimize(&quot;-fexpensive-optimizations&quot;)
+#pragma GCC optimize(&quot;-funsafe-loop-optimizations&quot;)
+#pragma GCC optimize(&quot;inline-functions-called-once&quot;)
+#pragma GCC optimize(&quot;-fdelete-null-pointer-checks&quot;)
+</code></pre>
+<h2 id="头文件include">头文件（include）：</h2>
+<pre><code class="language-cpp">#include &lt;assert.h&gt;　　　　//设定插入点
+#include &lt;ctype.h&gt;　　　　 //字符处理
+#include &lt;errno.h&gt;　　　　 //定义错误码
+#include &lt;float.h&gt;　　　　 //浮点数处理
+#include &lt;fstream.h&gt;　　　 //文件输入／输出
+#include &lt;iomanip.h&gt;　　　 //参数化输入／输出
+#include &lt;iostream.h&gt;　　　//数据流输入／输出
+#include &lt;limits.h&gt;　　　　//定义各种数据类型最值常量
+#include &lt;locale.h&gt;　　　　//定义本地化函数
+#include &lt;math.h&gt;　　　　　//定义数学函数
+#include &lt;stdio.h&gt;　　　　 //定义输入／输出函数
+#include &lt;stdlib.h&gt;　　　　//定义杂项函数及内存分配函数
+#include &lt;string.h&gt;　　　　//字符串处理
+#include &lt;strstrea.h&gt;　　　//基于数组的输入／输出
+#include &lt;time.h&gt;　　　　　//定义关于时间的函数
+#include &lt;wchar.h&gt;　　　　 //宽字符处理及输入／输出
+#include &lt;wctype.h&gt;　　　　//宽字符分类
+#include &lt;algorithm&gt;　　　 //STL 通用算法
+#include &lt;bitset&gt;　　　　　//STL 位集容器
+#include &lt;cctype&gt;
+#include &lt;cerrno&gt;
+#include &lt;clocale&gt;
+#include &lt;cmath&gt;
+#include &lt;complex&gt;　　　　 //复数类
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;ctime&gt;
+#include &lt;deque&gt;　　　　　 //STL 双端队列容器
+#include &lt;exception&gt;　　　 //异常处理类
+#include &lt;fstream&gt;
+#include &lt;functional&gt;　　　//STL 定义运算函数（代替运算符）
+#include &lt;limits&gt;
+#include &lt;list&gt;　　　　　　//STL 线性列表容器
+#include &lt;map&gt;　　　　　　 //STL 映射容器
+#include &lt;iomanip&gt;
+#include &lt;ios&gt;　　　　　　 //基本输入／输出支持
+#include &lt;iosfwd&gt;　　　　　//输入／输出系统使用的前置声明
+#include &lt;iostream&gt;
+#include &lt;istream&gt;　　　　 //基本输入流
+#include &lt;ostream&gt;　　　　 //基本输出流
+#include &lt;queue&gt;　　　　　 //STL 队列容器
+#include &lt;set&gt;　　　　　　 //STL 集合容器
+#include &lt;sstream&gt;　　　　 //基于字符串的流
+#include &lt;stack&gt;　　　　　 //STL 堆栈容器　　　　
+#include &lt;stdexcept&gt;　　　 //标准异常类
+#include &lt;streambuf&gt;　　　 //底层输入／输出支持
+#include &lt;string&gt;　　　　　//字符串类
+#include &lt;utility&gt;　　　　 //STL 通用模板类
+#include &lt;vector&gt;　　　　　//STL 动态数组容器
+#include &lt;cwchar&gt;
+#include &lt;cwctype&gt;
+#include &lt;complex.h&gt;　　 //复数处理
+#include &lt;fenv.h&gt;　　　　//浮点环境
+#include &lt;inttypes.h&gt;　　//整数格式转换
+#include &lt;stdbool.h&gt;　　 //布尔环境
+#include &lt;stdint.h&gt;　　　//整型环境
+#include &lt;tgmath.h&gt;　　　//通用类型数学宏
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[评论测试文档]]></title>
+        <id>https://nyanc-queue.github.io/post/gitalktests/</id>
+        <link href="https://nyanc-queue.github.io/post/gitalktests/">
+        </link>
+        <updated>2020-02-26T04:23:39.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1">1</h1>
+<h2 id="2">2</h2>
+<h3 id="3">3</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi><mi>W</mi><mi>Q</mi></mrow><annotation encoding="application/x-tex">QWQ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">Q</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord mathdefault">Q</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>1</mn></msup><msup><mn>6</mn><mn>1</mn></msup><msup><mn>6</mn><mn>1</mn></msup><msup><mn>6</mn><mn>1</mn></msup><msup><mn>6</mn><mn>1</mn></msup><mn>6</mn></mrow><annotation encoding="application/x-tex">2^16^16^16^16^16</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord">6</span></span></span></span></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[狗屁不通文章生成器？C++带你揭秘背后的算法！]]></title>
+        <id>https://nyanc-queue.github.io/post/BullshitGenerator/</id>
+        <link href="https://nyanc-queue.github.io/post/BullshitGenerator/">
+        </link>
+        <updated>2020-02-25T10:55:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="首先就如大家所知狗屁不通文章生成器最近在网上火了起来-那么今天就由我来跟大家聊聊这背后用到的主要算法">首先，就如大家所知，狗屁不通文章生成器最近在网上火了起来。那么今天，就由我来跟大家聊聊，这背后用到的主要算法</h1>
+<p>因为作者本人是一个C++选手，所以我先用C++复刻一下这个代码：</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+string famous[] = { &quot;爱迪生a，天才是百分之一的勤奋加百分之九十九的汗水。b&quot;,
+    &quot;查尔斯·史a，一个人几乎可以在任何他怀有无限热忱的事情上成功。b&quot;,
+    &quot;培根说过，深窥自己的心，而后发觉一切的奇迹在你自己。b&quot;,
+    &quot;歌德曾经a，流水在碰到底处时才会释放活力。b&quot;,
+    &quot;莎士比亚a，那脑袋里的智慧，就像打火石里的火花一样，不去打它是不肯出来的。b&quot;,
+    &quot;戴尔·卡耐基a，多数人都拥有自己不了解的能力和机会，都有可能做到未曾梦想的事情。b&quot;,
+    &quot;白哲特a，坚强的信念能赢得强者的心，并使他们变得更坚强。b&quot;,
+    &quot;伏尔泰a, 不经巨大的困难，不会有伟大的事业。b&quot;,
+    &quot;富勒曾经a, 苦难磨炼一些人，也毁灭另一些人。b&quot;,
+    &quot;文森特·皮尔a, 改变你的想法，你就改变了自己的世界。b&quot;,
+    &quot;拿破仑·希尔a, 不要等待，时机永远不会恰到好处。b&quot;,
+    &quot;塞涅卡a, 生命如同寓言，其价值不在与长短，而在与内容。b&quot;,
+    &quot;奥普拉·温弗瑞a, 你相信什么，你就成为什么样的人。b&quot;,
+    &quot;吕凯特a, 生命不可能有两次，但许多人连一次也不善于度过。b&quot;,
+    &quot;莎士比亚a, 人的一生是短的，但如果卑劣地过这一生，就太长了。b&quot;,
+    &quot;笛卡儿a, 我的努力求学没有得到别的好处，只不过是愈来愈发觉自己的无知。b&quot;,
+    &quot;左拉a, 生活的道路一旦选定，就要勇敢地走到底，决不回头。b&quot;,
+    &quot;米歇潘a, 生命是一条艰险的峡谷，只有勇敢的人才能通过。b&quot;,
+    &quot;吉姆·罗恩a, 要么你主宰生活，要么你被生活主宰。b&quot;,
+    &quot;日本谚语a, 不幸可能成为通向幸福的桥梁。b&quot;,
+    &quot;海贝尔a, 人生就是学校。在那里，与其说好的教师是幸福，不如说好的教师是不幸。b&quot;,
+    &quot;杰纳勒尔·乔治·S·巴顿a, 接受挑战，就可以享受胜利的喜悦。b&quot;,
+    &quot;德谟克利特a, 节制使快乐增加并使享受加强。b&quot;,
+    &quot;裴斯泰洛齐a, 今天应做的事没有做，明天再早也是耽误了。b&quot;,
+    &quot;歌德a, 决定一个人的一生，以及整个命运的，只是一瞬之间。b&quot;,
+    &quot;卡耐基a, 一个不注意小事情的人，永远不会成就大事业。b&quot;,
+    &quot;卢梭a, 浪费时间是一桩大罪过。b&quot;,
+    &quot;康德a, 既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去。b&quot;,
+    &quot;克劳斯·莫瑟爵士a, 教育需要花费钱，而无知也是一样。b&quot;,
+    &quot;伏尔泰a, 坚持意志伟大的事业需要始终不渝的精神。b&quot;,
+    &quot;亚伯拉罕·林肯a, 你活了多少岁不算什么，重要的是你是如何度过这些岁月的。b&quot;,
+    &quot;韩非a, 内外相应，言行相称。b&quot;,
+    &quot;富兰克林a, 你热爱生命吗？那么别浪费时间，因为时间是组成生命的材料。b&quot;,
+    &quot;马尔顿a, 坚强的信心，能使平凡的人做出惊人的事业。b&quot;,
+    &quot;笛卡儿a, 读一切好书，就是和许多高尚的人谈话。b&quot;,
+    &quot;塞涅卡a, 真正的人生，只有在经过艰难卓绝的斗争之后才能实现。b&quot;,
+    &quot;易卜生a, 伟大的事业，需要决心，能力，组织和责任感。b&quot;,
+    &quot;歌德a, 没有人事先了解自己到底有多大的力量，直到他试过以后才知道。b&quot;,
+    &quot;达尔文a, 敢于浪费哪怕一个钟头时间的人，说明他还不懂得珍惜生命的全部价值。b&quot;,
+    &quot;佚名a, 感激每一个新的挑战，因为它会锻造你的意志和品格。b&quot;,
+    &quot;奥斯特洛夫斯基a, 共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　b&quot;,
+    &quot;苏轼a, 古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。b&quot;,
+    &quot;王阳明a, 故立志者，为学之心也；为学者，立志之事也。b&quot;,
+    &quot;歌德a, 读一本好书，就如同和一个高尚的人在交谈。b&quot;,
+    &quot;乌申斯基a, 学习是劳动，是充满思想的劳动。b&quot;,
+    &quot;别林斯基a, 好的书籍是最贵重的珍宝。b&quot;,
+    &quot;富兰克林a, 读书是易事，思索是难事，但两者缺一，便全无用处。b&quot;,
+    &quot;鲁巴金a, 读书是在别人思想的帮助下，建立起自己的思想。b&quot;,
+    &quot;培根a, 合理安排时间，就等于节约时间。b&quot;,
+    &quot;屠格涅夫a, 你想成为幸福的人吗？但愿你首先学会吃得起苦。b&quot;,
+    &quot;莎士比亚a, 抛弃时间的人，时间也抛弃他。b&quot;,
+    &quot;叔本华a, 普通人只想到如何度过时间，有才能的人设法利用时间。b&quot;,
+    &quot;博a, 一次失败，只是证明我们成功的决心还够坚强。 维b&quot;,
+    &quot;拉罗什夫科a, 取得成就时坚持不懈，要比遭到失败时顽强不屈更重要。b&quot;,
+    &quot;莎士比亚a, 人的一生是短的，但如果卑劣地过这一生，就太长了。b&quot;,
+    &quot;俾斯麦a, 失败是坚忍的最后考验。b&quot;,
+    &quot;池田大作a, 不要回避苦恼和困难，挺起身来向它挑战，进而克服它。b&quot;,
+    &quot;莎士比亚a, 那脑袋里的智慧，就像打火石里的火花一样，不去打它是不肯出来的。b&quot;,
+    &quot;希腊a, 最困难的事情就是认识自己。b&quot;,
+    &quot;黑塞a, 有勇气承担命运这才是英雄好汉。b&quot;,
+    &quot;非洲a, 最灵繁的人也看不见自己的背脊。b&quot;,
+    &quot;培根a, 阅读使人充实，会谈使人敏捷，写作使人精确。b&quot;,
+    &quot;斯宾诺莎a, 最大的骄傲于最大的自卑都表示心灵的最软弱无力。b&quot;,
+    &quot;西班牙a, 自知之明是最难得的知识。b&quot;,
+    &quot;塞内加a, 勇气通往天堂，怯懦通往地狱。b&quot;,
+    &quot;赫尔普斯a, 有时候读书是一种巧妙地避开思考的方法。b&quot;,
+    &quot;笛卡儿a, 阅读一切好书如同和过去最杰出的人谈话。b&quot;,
+    &quot;邓拓a, 越是没有本领的就越加自命不凡。b&quot;,
+    &quot;爱尔兰a, 越是无能的人，越喜欢挑剔别人的错儿。b&quot;,
+    &quot;老子a, 知人者智，自知者明。胜人者有力，自胜者强。b&quot;,
+    &quot;歌德a, 意志坚强的人能把世界放在手中像泥块一样任意揉捏。b&quot;,
+    &quot;迈克尔·F·斯特利a, 最具挑战性的挑战莫过于提升自我。b&quot;,
+    &quot;爱迪生a, 失败也是我需要的，它和成功对我一样有价值。b&quot;,
+    &quot;罗素·贝克a, 一个人即使已登上顶峰，也仍要自强不息。b&quot;,
+    &quot;马云a, 最大的挑战和突破在于用人，而用人最大的突破在于信任人。b&quot;,
+    &quot;雷锋a, 自己活着，就是为了使别人过得更美好。b&quot;,
+    &quot;布尔沃a, 要掌握书，莫被书掌握；要为生而读，莫为读而生。b&quot;,
+    &quot;培根a, 要知道对好事的称颂过于夸大，也会招来人们的反感轻蔑和嫉妒。b&quot;,
+    &quot;莫扎特a, 谁和我一样用功，谁就会和我一样成功。b&quot;,
+    &quot;马克思a, 一切节省，归根到底都归结为时间的节省。b&quot;,
+    &quot;莎士比亚a, 意志命运往往背道而驰，决心到最后会全部推倒。b&quot;,
+    &quot;卡莱尔a, 过去一切时代的精华尽在书中。b&quot;,
+    &quot;培根a, 深窥自己的心，而后发觉一切的奇迹在你自己。b&quot;,
+    &quot;罗曼·罗兰a, 只有把抱怨环境的心情，化为上进的力量，才是成功的保证。b&quot;,
+    &quot;孔子a, 知之者不如好之者，好之者不如乐之者。b&quot;,
+    &quot;达·芬奇a, 大胆和坚定的决心能够抵得上武器的精良。b&quot;,
+    &quot;叔本华a, 意志是一个强壮的盲人，倚靠在明眼的跛子肩上。b&quot;,
+    &quot;黑格尔a, 只有永远躺在泥坑里的人，才不会再掉进坑里。b&quot;,
+    &quot;普列姆昌德a, 希望的灯一旦熄灭，生活刹那间变成了一片黑暗。b&quot;,
+    &quot;维龙a, 要成功不需要什么特别的才能，只要把你能做的小事做得好就行了。b&quot;,
+    &quot;郭沫若a, 形成天才的决定因素应该是勤奋。b&quot;,
+    &quot;洛克a, 学到很多东西的诀窍，就是一下子不要学很多。b&quot;,
+    &quot;西班牙a, 自己的鞋子，自己知道紧在哪里。b&quot;,
+    &quot;拉罗什福科a, 我们唯一不会改正的缺点是软弱。b&quot;,
+    &quot;亚伯拉罕·林肯a, 我这个人走得很慢，但是我从不后退。b&quot;,
+    &quot;美华纳a, 勿问成功的秘诀为何，且尽全力做你应该做的事吧。b&quot;,
+    &quot;俾斯麦a, 对于不屈不挠的人来说，没有失败这回事。b&quot;,
+    &quot;阿卜·日·法拉兹a, 学问是异常珍贵的东西，从任何源泉吸收都不可耻。b&quot;,
+    &quot;白哲特a, 坚强的信念能赢得强者的心，并使他们变得更坚强。 b&quot;,
+    &quot;查尔斯·史考伯a, 一个人几乎可以在任何他怀有无限热忱的事情上成功。 b&quot;,
+    &quot;贝多芬a, 卓越的人一大优点是：在不利与艰难的遭遇里百折不饶。b&quot;,
+    &quot;莎士比亚a, 本来无望的事，大胆尝试，往往能成功。b&quot;,
+    &quot;卡耐基a, 我们若已接受最坏的，就再没有什么损失。b&quot;,
+    &quot;德国a, 只有在人群中间，才能认识自己。b&quot;,
+    &quot;史美尔斯a, 书籍把我们引入最美好的社会，使我们认识各个时代的伟大智者。b&quot;,
+    &quot;冯学峰a, 当一个人用工作去迎接光明，光明很快就会来照耀着他。b&quot;,
+    &quot;吉格·金克拉a, 如果你能做梦，你就能实现它。b&quot;};
+string before[] = {&quot;曾经说过&quot;,
+    &quot;在不经意间这样说过&quot;,
+    &quot;说过一句著名的话&quot;,
+    &quot;曾经提到过&quot;,
+    &quot;说过一句富有哲理的话&quot;};
+string after[] = {&quot;这不禁令我深思. &quot;,
+    &quot;带着这句话, 我们还要更加慎重的审视这个问题: &quot;,
+    &quot;这启发了我. &quot;,
+    &quot;我希望诸位也能好好地体会这句话. &quot;,
+    &quot;这句话语虽然很短, 但令我浮想联翩. &quot;,
+    &quot;这句话看似简单，但其中的阴郁不禁让人深思. &quot;,
+    &quot;这句话把我们带到了一个新的维度去思考这个问题: &quot;,
+    &quot;这似乎解答了我的疑惑. &quot;};
+string bosh[] = {&quot;现在, 解决x的问题, 是非常非常重要的. 所以, &quot;,
+    &quot;我们不得不面对一个非常尴尬的事实, 那就是, &quot;,
+    &quot;x的发生, 到底需要如何做到, 不x的发生, 又会如何产生. &quot;,
+    &quot;而这些并不是完全重要, 更加重要的问题是, &quot;,
+    &quot;x, 到底应该如何实现. &quot;,
+    &quot;带着这些问题, 我们来审视一下x. &quot;,
+    &quot;所谓x, 关键是x需要如何写. &quot;,
+    &quot;我们一般认为, 抓住了问题的关键, 其他一切则会迎刃而解.&quot;,
+    &quot;问题的关键究竟为何? &quot;,
+    &quot;x因何而发生?&quot;,
+    &quot;每个人都不得不面对这些问题.  在面对这种问题时, &quot;,
+    &quot;一般来讲, 我们都必须务必慎重的考虑考虑. &quot;,
+    &quot;要想清楚, x, 到底是一种怎么样的存在. &quot;,
+    &quot;了解清楚x到底是一种怎么样的存在, 是解决一切问题的关键.&quot;,
+    &quot;就我个人来说, x对我的意义, 不能不说非常重大. &quot;,
+    &quot;本人也是经过了深思熟虑,在每个日日夜夜思考这个问题. &quot;,
+    &quot;x, 发生了会如何, 不发生又会如何. &quot;,
+    &quot;在这种困难的抉择下, 本人思来想去, 寝食难安.&quot;,
+    &quot;生活中, 若x出现了, 我们就不得不考虑它出现了的事实. &quot;,
+    &quot;这种事实对本人来说意义重大, 相信对这个世界也是有一定意义的.&quot;,
+    &quot;我们都知道, 只要有意义, 那么就必须慎重考虑.&quot;,
+    &quot;既然如此, &quot;,
+    &quot;那么, &quot;,
+    &quot;我认为, &quot;,
+    &quot;一般来说, &quot;,
+    &quot;总结的来说, &quot;,
+    &quot;既然如何, &quot;,
+    &quot;经过上述讨论, &quot;,
+    &quot;这样看来, &quot;,
+    &quot;从这个角度来看, &quot;,
+    &quot;我们不妨可以这样来想: &quot;,
+    &quot;这是不可避免的. &quot;,
+    &quot;可是，即使是这样，x的出现仍然代表了一定的意义. &quot;,
+    &quot;x似乎是一种巧合，但如果我们从一个更大的角度看待问题，这似乎是一种不可避免的事实. &quot;,
+    &quot;在这种不可避免的冲突下，我们必须解决这个问题. &quot;,
+    &quot;对我个人而言，x不仅仅是一个重大的事件，还可能会改变我的人生. &quot;};
+
+string title;
+void shuffleall(){
+    for(int i=0;i&lt;107;i++){
+        swap(famous[i],famous[rand()%107]);
+    }
+    for(int i=0;i&lt;5;i++){
+        swap(before[i],before[rand()%5]);
+    }
+    for(int i=0;i&lt;8;i++){
+        swap(after[i],after[rand()%8]);
+    }
+    for(int i=0;i&lt;36;i++){
+        swap(bosh[i],bosh[rand()%36]);
+    }
+}
+void string_replace( std::string &amp;strBig, const std::string &amp;strsrc, const std::string &amp;strdst)
+{
+    std::string::size_type pos = 0;
+    std::string::size_type srclen = strsrc.size();
+    std::string::size_type dstlen = strdst.size();
+
+    while( (pos=strBig.find(strsrc, pos)) != std::string::npos )
+    {
+        strBig.replace( pos, srclen, strdst );
+        pos += dstlen;
+    }
+} 
+
+string famousg(){
+    int tmp;
+    tmp = rand()%107;
+    string_replace(famous[tmp],&quot;a&quot;,before[rand()%5]);
+    string_replace(famous[tmp],&quot;b&quot;,after[rand()%5]);
+    return famous[tmp];
+}
+
+string anotherpara(){
+    return &quot;\r\n    &quot;;
+}
+
+int llll;
+
+int main(){
+    srand(time(NULL));
+    cout &lt;&lt;&quot;Input title:  &quot;;
+    while(title.empty())getline(cin,title); //title
+    cout &lt;&lt;&quot;Input length:   &quot;;
+    cin &gt;&gt; llll;
+    cout &lt;&lt; endl;
+    for (size_t i = 0; i &lt; llll; i++){
+        string tmp2;
+        while(tmp2.size()&lt;600){
+            shuffleall();
+            int bk = rand()%101;
+            if(bk &lt; 4){
+                tmp2 = tmp2+anotherpara();
+            }else if(bk &lt;20){
+                tmp2 = tmp2+famousg();
+            }else{
+                tmp2 = tmp2+bosh[rand()%36];
+            }
+            string_replace(tmp2,&quot;x&quot;,title);
+        }
+
+        cout &lt;&lt; tmp2 &lt;&lt; endl;
+    }
+    //system( &quot;pause&quot; );
+    return 0;
+}
+</code></pre>
+<p>首先，第一部分，我们可以看到：</p>
+<pre><code class="language-cpp">
+string famous[] = { &quot;爱迪生a，天才是百分之一的勤奋加百分之九十九的汗水。b&quot;,
+    &quot;查尔斯·史a，一个人几乎可以在任何他怀有无限热忱的事情上成功。b&quot;,
+    &quot;培根说过，深窥自己的心，而后发觉一切的奇迹在你自己。b&quot;,
+    &quot;歌德曾经a，流水在碰到底处时才会释放活力。b&quot;,
+    &quot;莎士比亚a，那脑袋里的智慧，就像打火石里的火花一样，不去打它是不肯出来的。b&quot;,
+    &quot;戴尔·卡耐基a，多数人都拥有自己不了解的能力和机会，都有可能做到未曾梦想的事情。b&quot;,
+    &quot;白哲特a，坚强的信念能赢得强者的心，并使他们变得更坚强。b&quot;,
+    &quot;伏尔泰a, 不经巨大的困难，不会有伟大的事业。b&quot;,
+    &quot;富勒曾经a, 苦难磨炼一些人，也毁灭另一些人。b&quot;,
+    &quot;文森特·皮尔a, 改变你的想法，你就改变了自己的世界。b&quot;,
+    &quot;拿破仑·希尔a, 不要等待，时机永远不会恰到好处。b&quot;,
+    &quot;塞涅卡a, 生命如同寓言，其价值不在与长短，而在与内容。b&quot;,
+    &quot;奥普拉·温弗瑞a, 你相信什么，你就成为什么样的人。b&quot;,
+    &quot;对我个人而言，x不仅仅是一个重大的事件，还可能会改变我的人生. &quot;};
+</code></pre>
+<p>可以看到，其中所生成的所有语言都是预先写好的，在写的时候只要打乱一下，然后随便输出两句，就行了。<br>
+这样，就引出了下一个话题：</p>
+<h3 id="打乱算法">打乱算法</h3>
+<p>首先，打乱算法又叫RandomShuffle，可以打乱一个数组里面的元素。而此份代码，RandomShuffle的实现如下：</p>
+<pre><code class="language-cpp">void shuffleall(){
+    for(int i=0;i&lt;107;i++){
+        swap(famous[i],famous[rand()%107]);
+    }
+    for(int i=0;i&lt;5;i++){
+        swap(before[i],before[rand()%5]);
+    }
+    for(int i=0;i&lt;8;i++){
+        swap(after[i],after[rand()%8]);
+    }
+    for(int i=0;i&lt;36;i++){
+        swap(bosh[i],bosh[rand()%36]);
+    }
+}
+</code></pre>
+<p>可以看到，我们将数组的第i个元素和一个随机的元素调换了位置<br>
+这样把每一个元素都当作第i个元素一次，就可以实现洗牌的效果</p>
+<p>其他的就没什么好说的了</p>
+<h1 id="总结主要算法randomshuffle话都是写好的技术含量不算太大">总结：主要算法RandomShuffle，话都是写好的，技术含量不算太大</h1>
+<p>特别鸣谢：<br>
+<a href="https://www.luogu.com.cn/user/224991">Fuhrer</a><br>
+的Debug</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何华丽的在洛谷出题？]]></title>
+        <id>https://nyanc-queue.github.io/post/m(f)uck-a-problem/</id>
+        <link href="https://nyanc-queue.github.io/post/m(f)uck-a-problem/">
+        </link>
+        <updated>2020-02-25T09:36:05.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="大家好今天我们来教一下如何华丽的在洛谷出题">大家好，今天我们来教一下如何华丽的在洛谷出题</h1>
+<p>出题所需要的，就是自己的耐心，以及灵感：<br>
+想必大家也听说过题目背景是没有用的吧，但是出题的时候，题目背景往往是最抓人眼球的部分，而且平日刷题也不怎么赶时间，所以题目背景就更值得一看了<br>
+比如SPOJ上的第一道题，生命的意义<br>
+<s>（好像是叫这个名）</s> 比A+B还要简单，但是好像就能引发思考<br>
+<s>生命的意义到底是什么</s> 所以，想要出好的题，就从题目被景开始吧</p>
+<h3 id="以上都没有用下面进入正题">以上都没有用，下面进入正题：</h3>
+<p>首先，我来介绍一下洛谷的出题区：<br>
+<img src="https://nyanc-queue.github.io/post-images/1582626313604.png" alt="" loading="lazy"><br>
+先进入个人题库<br>
+<img src="https://nyanc-queue.github.io/post-images/1582626320222.png" alt="" loading="lazy"><br>
+再点击这里，就可以开始出题了！</p>
+<h2 id="到此我们的第一阶段就完成了">到此，我们的第一阶段就完成了！</h2>
+<p>下面继续：</p>
+<p><img src="https://nyanc-queue.github.io/post-images/1582626341137.png" alt="" loading="lazy"><br>
+到这个界面后，里面的东西大家就填一填就行，但是切记不要出洛谷里有的题，<br>
+<s>没有灵感可以憋两天</s> ，然后保存</p>
+<h1 id="你们人生中的第一道题就出好了"><s>你们人生中的第一道题就出好了！！！</s></h1>
+<h1 id="哎哎桥豆麻袋那我这也交不了啊">哎哎，桥豆麻袋，那我这也交不了啊</h1>
+<h1 id="因为你们没出点啊没有数据点你交个屁啊">因为你们没出点啊，没有数据点你交个屁啊</h1>
+<h1 id="那么接下来我来教大家出数据点">那么接下来，我来教大家出数据点：</h1>
+<p><img src="https://nyanc-queue.github.io/post-images/1582626354325.png" alt="" loading="lazy"><br>
+首先我们开出一个文件夹（名字自取，只可以是嘤语）<br>
+然后打开它<br>
+<img src="https://nyanc-queue.github.io/post-images/1582626361817.png" alt="" loading="lazy"><br>
+建两个文件，后缀名改为.in和.out，一组数据的名称要一致<br>
+可以建好几组数据<br>
+然后打开他们<br>
+<img src="https://nyanc-queue.github.io/post-images/1582626368826.png" alt="" loading="lazy"><br>
+这里的.in模拟的是我们程序的读入，.out是输出。<br>
+也就是说，洛谷oj会模拟.in输入，判断输出是否与.out一致<br>
+最后，把文件散出来，打成zip<br>
+<img src="https://nyanc-queue.github.io/post-images/1582626379541.png" alt="" loading="lazy"><br>
+然后上传就行啦</p>
+<h1 id="最后我们还可以调整各个数据点的参数">最后，我们还可以调整各个数据点的参数</h1>
+<h1 id="然后保存题目自己做一下试试吧">然后保存题目，自己做一下试试吧！</h1>
+<figure data-type="image" tabindex="1"><img src="https://nyanc-queue.github.io/post-images/1582626389817.png" alt="" loading="lazy"></figure>
+<h1 id="本人洛谷号">本人<a href="https://www.luogu.com.cn/user/204161">洛谷号</a></h1>
+]]></content>
+    </entry>
+</feed>

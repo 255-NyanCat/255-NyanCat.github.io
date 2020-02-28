@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>关于C++，你所需要的所有头 | NyanC-Queue&#39;s blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://nyanc-queue.github.io/favicon.ico?v=1582868491543">
+<link rel="stylesheet" href="https://nyanc-queue.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="优化（pragma）：
+#pragma GCC optimize(2)
+#pragma GCC optimize(3)
+#pragma GCC optimize(&quot;Ofast&quot;)
+#pragma GCC optimize..." />
+    <meta name="keywords" content="C++" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://nyanc-queue.github.io">
+        <img src="https://nyanc-queue.github.io/images/avatar.png?v=1582868491543" class="site-logo">
+        <h1 class="site-title">NyanC-Queue&#39;s blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/NyanC-Queue" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      这里是NyanC-Queue的博客QWQ
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> <br/> This is <a herf="https://www.luogu.com.cn/user/204161" target="_blank">NyanC-Queue</a>'s blog | <a class="rss" href="https://nyanc-queue.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">关于C++，你所需要的所有头</h2>
+            <div class="post-date">2020-02-28</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="优化pragma">优化（pragma）：</h2>
+<pre><code class="language-cpp">#pragma GCC optimize(2)
+#pragma GCC optimize(3)
+#pragma GCC optimize(&quot;Ofast&quot;)
+#pragma GCC optimize(&quot;inline&quot;)
+#pragma GCC optimize(&quot;-fgcse&quot;)
+#pragma GCC optimize(&quot;-fgcse-lm&quot;)
+#pragma GCC optimize(&quot;-fipa-sra&quot;)
+#pragma GCC optimize(&quot;-ftree-pre&quot;)
+#pragma GCC optimize(&quot;-ftree-vrp&quot;)
+#pragma GCC optimize(&quot;-fpeephole2&quot;)
+#pragma GCC optimize(&quot;-ffast-math&quot;)
+#pragma GCC optimize(&quot;-fsched-spec&quot;)
+#pragma GCC optimize(&quot;unroll-loops&quot;)
+#pragma GCC optimize(&quot;-falign-jumps&quot;)
+#pragma GCC optimize(&quot;-falign-loops&quot;)
+#pragma GCC optimize(&quot;-falign-labels&quot;)
+#pragma GCC optimize(&quot;-fdevirtualize&quot;)
+#pragma GCC optimize(&quot;-fcaller-saves&quot;)
+#pragma GCC optimize(&quot;-fcrossjumping&quot;)
+#pragma GCC optimize(&quot;-fthread-jumps&quot;)
+#pragma GCC optimize(&quot;-funroll-loops&quot;)
+#pragma GCC optimize(&quot;-fwhole-program&quot;)
+#pragma GCC optimize(&quot;-freorder-blocks&quot;)
+#pragma GCC optimize(&quot;-fschedule-insns&quot;)
+#pragma GCC optimize(&quot;inline-functions&quot;)
+#pragma GCC optimize(&quot;-ftree-tail-merge&quot;)
+#pragma GCC optimize(&quot;-fschedule-insns2&quot;)
+#pragma GCC optimize(&quot;-fstrict-aliasing&quot;)
+#pragma GCC optimize(&quot;-fstrict-overflow&quot;)
+#pragma GCC optimize(&quot;-falign-functions&quot;)
+#pragma GCC optimize(&quot;-fcse-skip-blocks&quot;)
+#pragma GCC optimize(&quot;-fcse-follow-jumps&quot;)
+#pragma GCC optimize(&quot;-fsched-interblock&quot;)
+#pragma GCC optimize(&quot;-fpartial-inlining&quot;)
+#pragma GCC optimize(&quot;no-stack-protector&quot;)
+#pragma GCC optimize(&quot;-freorder-functions&quot;)
+#pragma GCC optimize(&quot;-findirect-inlining&quot;)
+#pragma GCC optimize(&quot;-frerun-cse-after-loop&quot;)
+#pragma GCC optimize(&quot;inline-small-functions&quot;)
+#pragma GCC optimize(&quot;-finline-small-functions&quot;)
+#pragma GCC optimize(&quot;-ftree-switch-conversion&quot;)
+#pragma GCC optimize(&quot;-foptimize-sibling-calls&quot;)
+#pragma GCC optimize(&quot;-fexpensive-optimizations&quot;)
+#pragma GCC optimize(&quot;-funsafe-loop-optimizations&quot;)
+#pragma GCC optimize(&quot;inline-functions-called-once&quot;)
+#pragma GCC optimize(&quot;-fdelete-null-pointer-checks&quot;)
+</code></pre>
+<h2 id="头文件include">头文件（include）：</h2>
+<pre><code class="language-cpp">#include &lt;assert.h&gt;　　　　//设定插入点
+#include &lt;ctype.h&gt;　　　　 //字符处理
+#include &lt;errno.h&gt;　　　　 //定义错误码
+#include &lt;float.h&gt;　　　　 //浮点数处理
+#include &lt;fstream.h&gt;　　　 //文件输入／输出
+#include &lt;iomanip.h&gt;　　　 //参数化输入／输出
+#include &lt;iostream.h&gt;　　　//数据流输入／输出
+#include &lt;limits.h&gt;　　　　//定义各种数据类型最值常量
+#include &lt;locale.h&gt;　　　　//定义本地化函数
+#include &lt;math.h&gt;　　　　　//定义数学函数
+#include &lt;stdio.h&gt;　　　　 //定义输入／输出函数
+#include &lt;stdlib.h&gt;　　　　//定义杂项函数及内存分配函数
+#include &lt;string.h&gt;　　　　//字符串处理
+#include &lt;strstrea.h&gt;　　　//基于数组的输入／输出
+#include &lt;time.h&gt;　　　　　//定义关于时间的函数
+#include &lt;wchar.h&gt;　　　　 //宽字符处理及输入／输出
+#include &lt;wctype.h&gt;　　　　//宽字符分类
+#include &lt;algorithm&gt;　　　 //STL 通用算法
+#include &lt;bitset&gt;　　　　　//STL 位集容器
+#include &lt;cctype&gt;
+#include &lt;cerrno&gt;
+#include &lt;clocale&gt;
+#include &lt;cmath&gt;
+#include &lt;complex&gt;　　　　 //复数类
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;ctime&gt;
+#include &lt;deque&gt;　　　　　 //STL 双端队列容器
+#include &lt;exception&gt;　　　 //异常处理类
+#include &lt;fstream&gt;
+#include &lt;functional&gt;　　　//STL 定义运算函数（代替运算符）
+#include &lt;limits&gt;
+#include &lt;list&gt;　　　　　　//STL 线性列表容器
+#include &lt;map&gt;　　　　　　 //STL 映射容器
+#include &lt;iomanip&gt;
+#include &lt;ios&gt;　　　　　　 //基本输入／输出支持
+#include &lt;iosfwd&gt;　　　　　//输入／输出系统使用的前置声明
+#include &lt;iostream&gt;
+#include &lt;istream&gt;　　　　 //基本输入流
+#include &lt;ostream&gt;　　　　 //基本输出流
+#include &lt;queue&gt;　　　　　 //STL 队列容器
+#include &lt;set&gt;　　　　　　 //STL 集合容器
+#include &lt;sstream&gt;　　　　 //基于字符串的流
+#include &lt;stack&gt;　　　　　 //STL 堆栈容器　　　　
+#include &lt;stdexcept&gt;　　　 //标准异常类
+#include &lt;streambuf&gt;　　　 //底层输入／输出支持
+#include &lt;string&gt;　　　　　//字符串类
+#include &lt;utility&gt;　　　　 //STL 通用模板类
+#include &lt;vector&gt;　　　　　//STL 动态数组容器
+#include &lt;cwchar&gt;
+#include &lt;cwctype&gt;
+#include &lt;complex.h&gt;　　 //复数处理
+#include &lt;fenv.h&gt;　　　　//浮点环境
+#include &lt;inttypes.h&gt;　　//整数格式转换
+#include &lt;stdbool.h&gt;　　 //布尔环境
+#include &lt;stdint.h&gt;　　　//整型环境
+#include &lt;tgmath.h&gt;　　　//通用类型数学宏
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://nyanc-queue.github.io/tag/EIi66Xdb0/" class="tag">
+                    C++
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://nyanc-queue.github.io/post/gitalktests/">
+                  <h3 class="post-title">
+                    评论测试文档
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'be726202b9dcef6181c5',
+        clientSecret: '43f93c3dfec138b235025c32a2b239123f81452e',
+        repo: 'blog-commit',
+        owner: 'NyanC-Queue',
+        admin: ['NyanC-Queue'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
